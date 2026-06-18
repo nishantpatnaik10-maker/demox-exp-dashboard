@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXP26 Experience Dashboard</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">PEGA<span>EXP</span></div>
+  <h1>EXP26 Experience Dashboard &mdash; Instance &amp; Engagement Tracker</h1>
+</header>
+
+<nav class="tabs">
+  <button class="active" data-tab="tab-links">&#128279; Quick Links</button>
+  <button data-tab="tab-instances">&#128202; Instance Mapping</button>
+  <button data-tab="tab-calendar">&#128197; Engagement Calendar</button>
+</nav>
+
+<main>
+
+  <!-- ===== QUICK LINKS ===== -->
+  <div id="tab-links" class="tab-panel active">
+    <div id="links-container"></div>
+  </div>
+
+  <!-- ===== INSTANCE TABLE ===== -->
+  <div id="tab-instances" class="tab-panel">
+    <div class="card">
+      <div class="card-title">&#128202; Instance Gameboard Mapping</div>
+      <div class="filter-bar">
+        <input id="filter-search" type="text" placeholder="Search hostname or type..." style="flex:1; min-width:180px;" />
+        <select id="filter-gameboard">
+          <option value="">All Gameboards</option>
+        </select>
+        <select id="filter-type">
+          <option value="">All Types</option>
+        </select>
+      </div>
+    </div>
+    <div id="instances-container"></div>
+  </div>
+
+  <!-- ===== CALENDAR ===== -->
+  <div id="tab-calendar" class="tab-panel">
+    <div class="calendar-layout">
+
+      <div>
+        <div class="card">
+          <div class="calendar-nav">
+            <button class="btn btn-ghost" id="cal-prev">&#8592; Prev</button>
+            <h2 id="cal-month-label"></h2>
+            <button class="btn btn-ghost" id="cal-next">Next &#8594;</button>
+          </div>
+          <div style="display:flex; gap:8px; margin-bottom:16px;">
+            <button class="btn btn-ghost" id="cal-today">Today</button>
+            <button class="btn btn-primary" id="btn-add-engagement">+ Add Engagement</button>
+          </div>
+          <div class="cal-grid" id="cal-grid"></div>
+
+          <!-- Legend -->
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; font-size:11px;">
+            <span><span class="cal-event type-workshop" style="display:inline-block;">Workshop</span></span>
+            <span><span class="cal-event type-demo" style="display:inline-block;">Demo</span></span>
+            <span><span class="cal-event type-training" style="display:inline-block;">Training</span></span>
+            <span><span class="cal-event type-review" style="display:inline-block;">Review</span></span>
+            <span><span class="cal-event type-planning" style="display:inline-block;">Planning</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-panel">
+        <div class="card" id="side-engagements"></div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== ADD ENGAGEMENT MODAL ===== -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <h3>Add Engagement</h3>
+    <form id="eng-form">
+      <div class="form-group">
+        <label for="eng-title">Title *</label>
+        <input id="eng-title" name="title" type="text" placeholder="e.g. Customer Workshop" required />
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="eng-date">Start Date *</label>
+          <input id="eng-date" name="date" type="date" required />
+        </div>
+        <div class="form-group">
+          <label for="eng-enddate">End Date</label>
+          <input id="eng-enddate" name="endDate" type="date" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="eng-type">Type</label>
+          <select id="eng-type" name="type">
+            <option value="">-- Select --</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="eng-gameboard">Gameboard</label>
+          <select id="eng-gameboard" name="gameboard">
+            <option value="">-- Select --</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="eng-attendees">Attendees</label>
+        <input id="eng-attendees" name="attendees" type="text" placeholder="e.g. Team A, Customer XYZ" />
+      </div>
+      <div class="form-group">
+        <label for="eng-notes">Notes</label>
+        <textarea id="eng-notes" name="notes" rows="3" placeholder="Any additional notes..."></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-ghost" id="modal-cancel">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save Engagement</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Data -->
+<script src="data/instances.js"></script>
+<script src="data/links.js"></script>
+<script src="data/engagements.js"></script>
+<!-- App -->
+<script src="assets/app.js"></script>
+
+<script>
+  // Populate engagement type dropdown in modal
+  document.addEventListener('DOMContentLoaded', () => {
+    const typeSelect = document.getElementById('eng-type');
+    ENGAGEMENT_TYPES.forEach(t => {
+      const opt = document.createElement('option');
+      opt.value = t;
+      opt.textContent = t;
+      typeSelect.appendChild(opt);
+    });
+  });
+</script>
+
+</body>
+</html>
