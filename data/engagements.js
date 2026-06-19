@@ -80,13 +80,31 @@ function updateEngagement(id, updates) {
   return all;
 }
 
-function exportEngagementsAsJS() {
+function exportEngagementsAsJSON() {
   const all = loadEngagements();
-  const json = JSON.stringify(all, null, 2);
-  const content = `// Auto-exported from EXP26 Dashboard\nconst INITIAL_ENGAGEMENTS = ${json};`;
-  const blob = new Blob([content], { type: 'text/javascript' });
+  const blob = new Blob([JSON.stringify(all, null, 2)], { type: 'application/json' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'engagements.js';
+  a.download = 'engagements-backup.json';
   a.click();
+}
+
+function importEngagementsFromFile(file, onComplete) {
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (!Array.isArray(data)) throw new Error('Expected a JSON array');
+      // Merge: add imported items that don't already exist (by id)
+      const existing = loadEngagements();
+      const existingIds = new Set(existing.map(x => x.id));
+      const merged = [...existing, ...data.filter(x => !existingIds.has(x.id))];
+      saveEngagements(merged);
+      if (onComplete) onComplete(merged);
+    } catch (err) {
+      alert('Import failed: ' + err.message + '\nMake sure the file is a valid engagements JSON export.');
+    }
+  };
+  reader.readAsText(file);
 }

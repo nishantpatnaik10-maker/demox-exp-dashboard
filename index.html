@@ -57,7 +57,11 @@
           <div style="display:flex; gap:8px; margin-bottom:16px; flex-wrap:wrap;">
             <button class="btn btn-ghost" id="cal-today">Today</button>
             <button class="btn btn-primary" id="btn-add-engagement">+ Add Engagement</button>
-            <button class="btn btn-ghost" onclick="exportEngagementsAsJS()" title="Download engagements.js to replace in your repo">&#8659; Export engagements.js</button>
+            <button class="btn btn-ghost" onclick="exportEngagementsAsJSON()" title="Download a JSON backup of all engagements">&#8659; Export</button>
+            <label class="btn btn-ghost" style="cursor:pointer;" title="Upload a previously exported JSON backup to restore engagements">
+              &#8657; Import
+              <input type="file" accept=".json" style="display:none;" onchange="importEngagementsFromFile(this.files[0], function(merged){ calState.engagements = merged; renderCalendar(); renderSidePanel(); alert('Imported successfully! ' + merged.length + ' total engagements loaded.'); }); this.value='';" />
+            </label>
           </div>
           <div class="cal-grid" id="cal-grid"></div>
 
