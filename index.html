@@ -54,9 +54,10 @@
             <h2 id="cal-month-label"></h2>
             <button class="btn btn-ghost" id="cal-next">Next &#8594;</button>
           </div>
-          <div style="display:flex; gap:8px; margin-bottom:16px;">
+          <div style="display:flex; gap:8px; margin-bottom:16px; flex-wrap:wrap;">
             <button class="btn btn-ghost" id="cal-today">Today</button>
             <button class="btn btn-primary" id="btn-add-engagement">+ Add Engagement</button>
+            <button class="btn btn-ghost" onclick="exportEngagementsAsJS()" title="Download engagements.js to replace in your repo">&#8659; Export engagements.js</button>
           </div>
           <div class="cal-grid" id="cal-grid"></div>
 
