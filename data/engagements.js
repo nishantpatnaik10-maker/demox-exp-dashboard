@@ -8,23 +8,13 @@ const ENGAGEMENTS_STORAGE_KEY = "exp26_engagements";
 const INITIAL_ENGAGEMENTS = [
   {
     "title": "Booking.com",
-    "date": "2026-06-23",
-    "endDate": "2026-06-23",
-    "gameboard": "exp26-gameboard-1.pegademo.com",
-    "type": "Workshop",
-    "attendees": "",
-    "notes": "",
-    "id": "eng-1781848136754"
-  },
-  {
-    "title": "EBC Opening",
     "date": "2026-06-25",
     "endDate": "2026-06-25",
     "gameboard": "exp26-gameboard-1.pegademo.com",
     "type": "Workshop",
     "attendees": "",
     "notes": "",
-    "id": "eng-1781848164435"
+    "id": "eng-1781845410356"
   },
   {
     "title": "Verizon",
@@ -34,7 +24,17 @@ const INITIAL_ENGAGEMENTS = [
     "type": "Workshop",
     "attendees": "",
     "notes": "",
-    "id": "eng-1781848189053"
+    "id": "eng-1781848364187"
+  },
+  {
+    "title": "Booking.com",
+    "date": "2026-06-23",
+    "endDate": "2026-06-23",
+    "gameboard": "exp26-gameboard-1.pegademo.com",
+    "type": "Workshop",
+    "attendees": "",
+    "notes": "",
+    "id": "eng-1781848395755"
   }
 ];
 
