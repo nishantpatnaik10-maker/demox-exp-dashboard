@@ -1,5 +1,5 @@
 // ISSUES / KANBAN DATA FILE
-// Auto-updated by Sync to GitHub on 2026-06-24T11:20:15.987Z
+// Auto-updated by Sync to GitHub on 2026-06-24T11:31:41.536Z
 // Do not edit manually — use the dashboard.
 
 const INITIAL_ISSUES = [
@@ -19,11 +19,14 @@ const INITIAL_ISSUES = [
     "description": "Org field on the game boards to be changed from a lookup to a free text",
     "priority": "Medium",
     "category": "UI/UX",
-    "status": "backlog",
+    "status": "inprogress",
     "assignee": "Wojciech",
     "gameboard": "",
     "id": "issue-1782299735510",
-    "createdAt": "2026-06-24T11:15:35.510Z"
+    "createdAt": "2026-06-24T11:15:35.510Z",
+    "updatedAt": "2026-06-24T11:31:36.709Z",
+    "comments": "Wojciech working on it",
+    "resolution": ""
   },
   {
     "title": "Upgrade to 26.1 GA",
