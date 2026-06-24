@@ -1,5 +1,5 @@
 // ENGAGEMENTS DATA FILE
-// Auto-updated by Sync to GitHub on 2026-06-24T10:35:25.880Z
+// Auto-updated by Sync to GitHub on 2026-06-24T10:39:10.179Z
 // Do not edit manually — use the dashboard.
 
 const INITIAL_ENGAGEMENTS = [
@@ -42,5 +42,15 @@ const INITIAL_ENGAGEMENTS = [
     "attendees": "Nandana Ganu",
     "notes": "",
     "id": "eng-1782297248106"
+  },
+  {
+    "title": "EBC",
+    "date": "2026-06-25",
+    "endDate": "2026-06-25",
+    "gameboard": "Gameboard 1",
+    "type": "Workshop",
+    "attendees": "Nandana",
+    "notes": "",
+    "id": "eng-1782297541653"
   }
 ];
