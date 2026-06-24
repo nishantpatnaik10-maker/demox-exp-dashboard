@@ -54,14 +54,12 @@
             <h2 id="cal-month-label"></h2>
             <button class="btn btn-ghost" id="cal-next">Next &#8594;</button>
           </div>
-          <div style="display:flex; gap:8px; margin-bottom:16px; flex-wrap:wrap;">
+          <div style="display:flex; gap:8px; margin-bottom:16px; flex-wrap:wrap; align-items:center;">
             <button class="btn btn-ghost" id="cal-today">Today</button>
             <button class="btn btn-primary" id="btn-add-engagement">+ Add Engagement</button>
-            <button class="btn btn-ghost" onclick="exportEngagementsAsJSON()" title="Download a JSON backup of all engagements">&#8659; Export</button>
-            <label class="btn btn-ghost" style="cursor:pointer;" title="Upload a previously exported JSON backup to restore engagements">
-              &#8657; Import
-              <input type="file" accept=".json" style="display:none;" onchange="importEngagementsFromFile(this.files[0], function(merged){ calState.engagements = merged; renderCalendar(); renderSidePanel(); alert('Imported successfully! ' + merged.length + ' total engagements loaded.'); }); this.value='';" />
-            </label>
+            <button class="btn btn-ghost" id="btn-gh-sync" title="Push engagements directly to GitHub">&#9729; Sync to GitHub</button>
+            <button class="btn btn-ghost" id="btn-gh-settings" title="Configure GitHub settings">&#9881; GitHub Settings</button>
+            <span id="sync-status" style="font-size:12px; color:#666;"></span>
           </div>
           <div class="cal-grid" id="cal-grid"></div>
 
@@ -84,6 +82,37 @@
   </div>
 
 </main>
+
+<!-- ===== GITHUB SETTINGS MODAL ===== -->
+<div class="modal-overlay" id="gh-modal-overlay">
+  <div class="modal">
+    <h3>&#9881; GitHub Settings</h3>
+    <p style="font-size:12px; color:#666; margin-bottom:16px;">These are stored locally in your browser. Your token is never sent anywhere except GitHub's API.</p>
+    <div class="form-group">
+      <label for="gh-token">Personal Access Token *</label>
+      <input id="gh-token" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" />
+      <span style="font-size:11px; color:#999;">Needs <strong>repo</strong> scope. <a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank">Generate one here</a>.</span>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="gh-owner">GitHub Username *</label>
+        <input id="gh-owner" type="text" placeholder="nishantpatnaik10-maker" />
+      </div>
+      <div class="form-group">
+        <label for="gh-repo">Repository Name *</label>
+        <input id="gh-repo" type="text" placeholder="demox-exp-dashboard" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="gh-branch">Branch</label>
+      <input id="gh-branch" type="text" placeholder="main" value="main" />
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-ghost" id="gh-modal-cancel">Cancel</button>
+      <button type="button" class="btn btn-primary" id="gh-modal-save">Save Settings</button>
+    </div>
+  </div>
+</div>
 
 <!-- ===== ADD ENGAGEMENT MODAL ===== -->
 <div class="modal-overlay" id="modal-overlay">

@@ -1,0 +1,541 @@
+WEBVTT
+
+1 "Aiswarya S" (2728400896)
+00:00:00.000 --> 00:00:05.959
+Tables that we need to exp export or check.
+
+2 "Wojciech Szeloch" (228542464)
+00:00:05.959 --> 00:00:19.769
+Yep. Sharing screen now, this one.
+
+3 "Wojciech Szeloch" (228542464)
+00:00:19.769 --> 00:00:36.119
+Right, so this is gameboard one, right? So, 1st the tables, right? So, let's go. So we have these demos defined.
+
+4 "Nishant Patnaik" (3462414592)
+00:00:36.119 --> 00:00:42.961
+The demo.
+
+5 "Wojciech Szeloch" (228542464)
+00:00:42.961 --> 00:00:56.370
+Okay, so we have, here we have all all six my suggestion.
+
+6 "Wojciech Szeloch" (228542464)
+00:00:56.370 --> 00:01:25.640
+Oh NO yeah it's it's set one on this, you know, like they find for to cover back office customer service and infinity studio, right? Oh, NO, that's it two sets, but effectively, if if the sets will be used then, then that's fine, right? So the blueprint will not be visible when using sets and NBA and agentic as well. So that's the the demo table then we can.
+
+7 "Nishant Patnaik" (3462414592)
+00:01:25.640 --> 00:01:32.759
+So just, what, what does that mean in the context of this whole thing?
+
+8 "Wojciech Szeloch" (228542464)
+00:01:32.759 --> 00:01:56.600
+So when you run it, ok, let's run it so when you run it without parameters.
+
+9 "Nishant Patnaik" (3462414592)
+00:01:56.600 --> 00:01:59.672
+We will see all the demos we have.
+
+10 "Wojciech Szeloch" (228542464)
+00:01:59.672 --> 00:02:17.678
+In the demo table, as simple as That so I see all the demos, all six demos.
+
+11 "Nishant Patnaik" (3462414592)
+00:02:17.678 --> 00:02:20.200
+Yeah I can limit that.
+
+12 "Wojciech Szeloch" (228542464)
+00:02:20.200 --> 00:02:31.220
+To say scope equal and then it's just whatever label we we want to give and we define set one.
+
+13 "Wojciech Szeloch" (228542464)
+00:02:32.457 --> 00:02:50.100
+Demo properties, right? So if we go to here, we have demo features, right? And then we have different features and also one of the features that they will set one or set two, right? So once we we do this, we see only two because we have only two points, right? The same for the set two.
+
+14 "Wojciech Szeloch" (228542464)
+00:02:50.100 --> 00:03:05.392
+Set two has only one, so there won't be Now we see it like there is one in the carousel, but if you go, because I changed that in the middle, right, of the application.
+
+15 "Nishant Patnaik" (3462414592)
+00:03:05.392 --> 00:03:06.998
+The parameter.
+
+16 "Wojciech Szeloch" (228542464)
+00:03:06.998 --> 00:03:10.050
+To go from here?
+
+17 "Wojciech Szeloch" (228542464)
+00:03:10.050 --> 00:03:32.839
+I don't have it then then actually there won't be even azure, right? You will get that to this page. So that's the the sets we we can call it differently actually this is just a label, right?
+
+18 "Nishant Patnaik" (3462414592)
+00:03:32.839 --> 00:03:34.759
+Whatever you. That's fine.
+
+19 "Wojciech Szeloch" (228542464)
+00:03:34.759 --> 00:04:04.700
+Yes you can use it here and that will work. So, so we have these two sets, ok? And then to make sure that instances are running, we go to click inventory we can we can run this case at any time actually to make sure this is all working. So if we have this view, that means that all the instances are up and running, and at least we have connectivity and at least these instances are configured.
+
+20 "Wojciech Szeloch" (228542464)
+00:04:04.700 --> 00:04:35.216
+I mean everything is deployed correctly in from the game board perspective, right? So, so the feedback service URL that needs to be set in these instances on each instance, right? It's there, we see the URL, so there there is a per match to to this game board URL which is expected and that's fine, right? And then we see which which instance we we using here for, for, for, for the demos.
+
+21 "Nishant Patnaik" (3462414592)
+00:04:35.216 --> 00:04:37.560
+Okay.
+
+22 "Wojciech Szeloch" (228542464)
+00:04:37.560 --> 00:05:03.929
+Alright, so that's it. And, and if there is not if there is not much actually, right? So if we want to add another instance, which is configured with a different game board, right? So we we All we have to do is actually check the checkbox to configure automatic and run it and this will go through all the instances and set the the proper game board URL.
+
+23 "Wojciech Szeloch" (228542464)
+00:05:03.929 --> 00:05:23.819
+To the feedback service application setting and that's all the configuration we we should be doing for the instances too much to to configure these instances with this game board. So that's it. And then the cleanup, so we have a cleanup case and if we want to just.
+
+24 "Wojciech Szeloch" (228542464)
+00:05:23.819 --> 00:05:45.199
+Just make sure we don't have any, any results and well let's see if we have any now in the game portal, then we see some statistics from the games. So we see we have some numbers, we have some players, right? We have some records. So to to remove it.
+
+25 "Wojciech Szeloch" (228542464)
+00:05:45.199 --> 00:06:05.239
+Let's, I think we can do it, right? Just check everything here and, and submit. And we see you should see these numbers, some numbers the game is very still.
+
+26 "Wojciech Szeloch" (228542464)
+00:06:05.239 --> 00:06:27.183
+An error right shows zero but it it removes everything. So it's I don't know. So refreshing here, we should see zeros yeah ok maybe something is open, but it's it will be.
+
+27 "Nishant Patnaik" (3462414592)
+00:06:27.183 --> 00:06:30.544
+It should wipe off or everything.
+
+28 "Wojciech Szeloch" (228542464)
+00:06:30.544 --> 00:06:36.299
+Yeah, if it's not then.
+
+29 "Wojciech Szeloch" (228542464)
+00:06:36.299 --> 00:06:51.779
+Let's go to score and see why it is not, maybe, I don't know, that this one's state. Yeah, I'm not sure why.
+
+30 "Wojciech Szeloch" (228542464)
+00:06:51.779 --> 00:07:11.609
+Let's try that again.
+
+31 "Wojciech Szeloch" (228542464)
+00:07:11.609 --> 00:07:28.121
+Interesting. Okay, but now it's it's removed, right? So it should be like zero zero. Yeah.
+
+32 "Wojciech Szeloch" (228542464)
+00:07:29.398 --> 00:07:42.217
+So we we should do the same for for game boards too. I mean for whatever we were using for the event, but it's it's exactly the same right approach, so.
+
+33 "Nishant Patnaik" (3462414592)
+00:07:42.217 --> 00:07:47.477
+Okay, I got it.
+
+34 "Wojciech Szeloch" (228542464)
+00:07:47.477 --> 00:07:53.001
+Yeah, so I'm not sure if, I think that's all. That's, that's.
+
+35 "Nishant Patnaik" (3462414592)
+00:07:53.001 --> 00:07:59.535
+Okay what's the user to to follow the administrative access? Is it your ID?
+
+36 "Aiswarya S" (2728400896)
+00:07:59.535 --> 00:08:03.439
+That's my.
+
+37 "Wojciech Szeloch" (228542464)
+00:08:03.439 --> 00:08:21.359
+Name admin operator with password install 12345 exclamation ok that should go. Yeah, I don't know what's anything to add? I think that's it.
+
+38 "Nishant Patnaik" (3462414592)
+00:08:21.359 --> 00:08:24.149
+Okay, so the.
+
+39 "Wojciech Szeloch" (228542464)
+00:08:24.149 --> 00:08:39.539
+Yeah, for the leaderboard, right? For the leaderboard, well that has to be parameterized from the file system. Let's see, so let's go to.
+
+40 "Wojciech Szeloch" (228542464)
+00:08:39.539 --> 00:08:59.539
+Six, G XP.
+
+41 "Wojciech Szeloch" (228542464)
+00:08:59.539 --> 00:09:19.349
+Scripts, config JS, and here we have a bunch of parameters for the leaderboard, right? So we can, we can show games.
+
+42 "Wojciech Szeloch" (228542464)
+00:09:19.349 --> 00:09:39.349
+So individual tabs per game. Okay. But this, that that will be for all games you have defined in the demo table, ok? So yeah, so we were that discussion if if someone wants to show this or if you want to show.
+
+43 "Wojciech Szeloch" (228542464)
+00:09:39.349 --> 00:09:59.341
+This this game only taps with the scoring for this this games only. It's still doable here. It's let's just remove these entries that we are not showing, right? Let's remove demos that we are not showing for the event, right? And before that we can we can do export.
+
+44 "Wojciech Szeloch" (228542464)
+00:10:01.159 --> 00:10:17.459
+Right? And then in the in even even next day you have different events that you need to add this this like blueprint e.g. that will not be shown for this one, then simply re import data to this table, right? Because here is everything like.
+
+45 "Wojciech Szeloch" (228542464)
+00:10:17.459 --> 00:10:38.195
+Configure correctly for all six demos. It's easy to remove and ok adding them now from, you know, manually that maybe a headache but you can import, right? Okay. So it should be as easy as that. And then then actually you may leverage to feed this feature to show games related tabs.
+
+46 "Nishant Patnaik" (3462414592)
+00:10:38.195 --> 00:10:39.820
+Simply give it to.
+
+47 "Wojciech Szeloch" (228542464)
+00:10:39.820 --> 00:11:03.401
+The true, right? And then you you have only the tabs that for the games we actually playing for the event. So it's it's up to you to decide whoever will be managing this. And then we should same for the team scores and partner scores. Well, the partner scores is a bit trickier because there has to be a flag in the team's table.
+
+48 "Nishant Patnaik" (3462414592)
+00:11:03.401 --> 00:11:06.858
+Saying that this is a partner org.
+
+49 "Wojciech Szeloch" (228542464)
+00:11:06.858 --> 00:11:31.438
+Right, if it's not able we don't know it, right? So that's a bit bit more trickier and show organization logos. This is false now. So when we go here to the leaderboard.
+
+50 "Wojciech Szeloch" (228542464)
+00:11:40.037 --> 00:11:57.629
+Well, there's nothing because ok we we just clean it right? There will be something for two. Yeah, so we don't have logos, we have these names kind of formatted.
+
+51 "Wojciech Szeloch" (228542464)
+00:11:57.629 --> 00:12:13.840
+In the square, but it's the it's NO logo. So, yeah, it's working. Alright. And that's that's it. That's it. Any questions?
+
+52 "Nishant Patnaik" (3462414592)
+00:12:13.840 --> 00:12:32.249
+Yeah, can you just click on that check inventory case? Just.
+
+53 "Nishant Patnaik" (3462414592)
+00:12:32.249 --> 00:12:59.969
+Yeah showed me like yeah yeah so this will.
+
+54 "Nishant Patnaik" (3462414592)
+00:12:59.969 --> 00:13:16.315
+I don't know, right?
+
+55 "Wojciech Szeloch" (228542464)
+00:13:16.315 --> 00:13:34.633
+So that you you break things say say that again, please? Yeah, not sure if this is my network or yours, but I can't hear you.
+
+56 "Aiswarya S" (2728400896)
+00:13:34.633 --> 00:13:44.660
+Yeah, I think we lost Nishant.
+
+57 "Wojciech Szeloch" (228542464)
+00:14:21.099 --> 00:14:42.317
+We still can't hear you.
+
+58 "Wojciech Szeloch" (228542464)
+00:14:47.220 --> 00:15:07.969
+Oh, we can hear you now.
+
+59 "Nishant Patnaik" (3462414592)
+00:15:34.677 --> 00:15:54.317
+You hear me now? Yes? Sorry, I was just saying that this check inventory will also give me an overview of, mapped to import one, right?
+
+60 "Wojciech Szeloch" (228542464)
+00:15:54.317 --> 00:16:22.479
+So to be very precise, it's this is the list that we have in the instance table in this game board, right? And we're checking only these. So there might be some other instances that maybe configured with this game board but we don't have them in the instance table, right?
+
+61 "Wojciech Szeloch" (228542464)
+00:16:22.479 --> 00:16:51.229
+So we don't know, but it's, we have the list that we configured that we want to use for this, for this event for with this game board and this is the list, right? So we can check if 1st of all, if the instances are up and running, right? Because once we have connectivity, that means it is, right? It's there and then we have information if the feedback services is pointing to this game board.
+
+62 "Wojciech Szeloch" (228542464)
+00:16:51.229 --> 00:17:09.098
+That's that's what it does. So it's, 1 min now ok so so yeah so to be very precise because yeah, it could be some some other instance that points to this game board.
+
+63 "Wojciech Szeloch" (228542464)
+00:17:10.760 --> 00:17:28.249
+Yeah, but frankly speaking, if that's the case, it's not even harmful because we never almost likely not captured any feedback coming from that instance that is not on this list because the game, there's NO.
+
+64 "Wojciech Szeloch" (228542464)
+00:17:28.249 --> 00:17:48.209
+You know corresponding game game object for that instance and for that game probably and for that operator so yeah but it's from perspective, this is from the like from the gameboard perspective, right? We set up these instances. Okay, we have, we have control on on them and we can control them because.
+
+65 "Wojciech Szeloch" (228542464)
+00:17:48.209 --> 00:18:08.209
+If you want to switch some some other instances to this game board, right? All we have to do is actually add them to the instance table, run their check inventory, make sure this is you know correct they they they point into this and if they are not pointing, then actually we can we can quickly fix it by this checkbox and submitting this and.
+
+66 "Wojciech Szeloch" (228542464)
+00:18:08.209 --> 00:18:20.023
+This will do the cycle or you can that's safe, you can do it any any time. So, so that will go, you know, come back with, with the.
+
+67 "Nishant Patnaik" (3462414592)
+00:18:20.023 --> 00:18:22.680
+With the results, right? So, so you can you.
+
+68 "Wojciech Szeloch" (228542464)
+00:18:22.680 --> 00:18:26.258
+Can do it many times because there might be some like locked rule set or.
+
+69 "Nishant Patnaik" (3462414592)
+00:18:26.258 --> 00:18:28.297
+You know instance.
+
+70 "Wojciech Szeloch" (228542464)
+00:18:28.297 --> 00:18:47.658
+Well, when it when instance is down then certainly this will not fix it but but you will see this, right? The status will maybe they might not be super meaningful message probably not but it's it will it will it will tell you that something is wrong on on with with a given instance.
+
+71 "Nishant Patnaik" (3462414592)
+00:18:47.658 --> 00:19:03.179
+Okay. Okay, makes sense. Okay ok so this is all we need to do to reset the game. What was the other thing that you wanted?
+
+72 "Aiswarya S" (2728400896)
+00:19:03.179 --> 00:19:21.517
+I wanted to talk about IS instances, Nishant, maybe a little brief of how this works and what all instances is set up already, I can cover it. Do you want to have it in the same session? Okay.
+
+73 "Wojciech Szeloch" (228542464)
+00:19:21.517 --> 00:19:28.451
+Grab your screen then. Okay.
+
+74 "Aiswarya S" (2728400896)
+00:19:28.451 --> 00:19:47.369
+Just give me a minute so we have game board one, gameboard two, gameboard three.
+
+75 "Aiswarya S" (2728400896)
+00:19:47.369 --> 00:20:02.909
+Spun off from the Pega World instances and we have debranded them of which we have two instances of Infinity studio, two of Infinity Studio each. Here I have set these instances.
+
+76 "Aiswarya S" (2728400896)
+00:20:02.909 --> 00:20:20.549
+To use one and two instances alone to use three model operators. So each time and these model operators are logged in with specific person's GitHub account already in the system. These are still.
+
+77 "Aiswarya S" (2728400896)
+00:20:20.549 --> 00:20:37.199
+Not set up yet. Maybe we can discuss on how we, we need this because I guess at the moment if for an event we are going to have only one dedicated instance having one infinity studio instance will surface.
+
+78 "Aiswarya S" (2728400896)
+00:20:37.199 --> 00:20:57.199
+So, unless and until we are going to have a huge event where we will have two dedicated instances of Infinity studio, we might have to have two things set up in a game board but for now, I'll just mention that these.
+
+79 "Aiswarya S" (2728400896)
+00:20:57.199 --> 00:21:17.569
+The logic is such a way that by each time you reset, these template operators will be used for operator creation for the individual players. Every time a new player is created, one of the template operators will be picked and their GitHub account will be signed in for the player and they don't have.
+
+80 "Aiswarya S" (2728400896)
+00:21:17.569 --> 00:21:39.919
+To pre login. So if suppose, closer to the event, I would suggest that everybody who is attending the event as a booth owner, they take responsibility to check with these individuals of how much token limit is already consumed or login with their login with the.
+
+81 "Aiswarya S" (2728400896)
+00:21:39.919 --> 00:22:06.679
+These credentials. Say, if I don't want Nanthana's account to be used as in if Nanthana's is account has reached closer to the token limit, they will have to log into the infinity studio one instance. Use the operator do not delete me one at n.pega.com and install 12345 exclamatory is the standard password. Log out of the existing session. Maybe I can also show.
+
+82 "Nishant Patnaik" (3462414592)
+00:22:06.679 --> 00:22:09.239
+How to log out? Yeah, I think yeah.
+
+83 "Aiswarya S" (2728400896)
+00:22:09.239 --> 00:22:29.939
+So while they have, this is on the game board, maybe I can just view this I'm resetting for infinity Studio two my credentials.
+
+84 "Aiswarya S" (2728400896)
+00:22:29.939 --> 00:22:45.299
+Just for the sake of demo ok I just took the wrong URL.
+
+85 "Aiswarya S" (2728400896)
+00:23:01.349 --> 00:23:25.678
+And pick this person's template operator ID, set it.
+
+86 "Nishant Patnaik" (3462414592)
+00:23:25.678 --> 00:23:32.438
+Before you sign out, can you show me how do you do the mapping that for this operator it is using the account?
+
+87 "Aiswarya S" (2728400896)
+00:23:32.438 --> 00:23:49.589
+For yeah there are two different strategies. One, it can take through keys through three operators or you can set the key to a single operator as well. I will show both the scenarios. I'll explain the logic.
+
+88 "Aiswarya S" (2728400896)
+00:23:49.589 --> 00:24:09.589
+Okay, maybe I can just show that and come back to this.
+
+89 "Aiswarya S" (2728400896)
+00:24:09.589 --> 00:24:37.819
+Okay So there is a DSS called enable model loop. If this is set as true, it will iterate through three model operators, model operator 123, and.
+
+90 "Aiswarya S" (2728400896)
+00:24:37.819 --> 00:24:59.359
+It will set one clone operator for each of the players using this activity. So it's, it's just like each of the GitHub accounts is actually tied to an operator profile, so what we are doing in the reset is while we are creating a new operator profile or new operator for each of the players.
+
+91 "Aiswarya S" (2728400896)
+00:24:59.359 --> 00:25:26.997
+We are copying it from a model operator which is one amongst the three operators that we have already signed in. So key is already provided and the and the loop is maintained in this one model loop ID, so for 1st loop, it will always set it to do not delete me one. For 2nd loop, it sets to do not delete me two and for the 3rd loop it sets to do not delete me three.
+
+92 "Aiswarya S" (2728400896)
+00:25:27.916 --> 00:25:47.029
+Okay. Suppose say I don't want three, three operators to be used. I can just disable the loop enabled to false and set the model loop ID to a specific user. Say I will make this to false.
+
+93 "Aiswarya S" (2728400896)
+00:25:47.029 --> 00:25:56.117
+Calls and make this to one, then I can set the copilot key only for model operator one. So it will always use only one account.
+
+94 "Nishant Patnaik" (3462414592)
+00:25:56.117 --> 00:25:57.739
+Which is do not left me one.
+
+95 "Aiswarya S" (2728400896)
+00:25:57.739 --> 00:26:06.061
+So this can be used in scenarios where we know that it is very minimal number of users who are going to use it and we don't need multiple accounts. So.
+
+96 "Aiswarya S" (2728400896)
+00:26:06.061 --> 00:26:24.989
+So this loop can be disabled and at the moment, it is not three, it is disabled in these two instances, three and four, it is a single operator and this is changed into three accounts only in one and two. Okay.
+
+97 "Aiswarya S" (2728400896)
+00:26:24.989 --> 00:26:44.989
+And coming back to how to reset this, this is the activity that's just straightforward cloning of operator to a new operator and setting this loop ID and so as a pre check for everyone who are owning this experience, they while they create a new operator.
+
+98 "Aiswarya S" (2728400896)
+00:26:44.989 --> 00:27:09.039
+I mean while they log in as a new player, they should see this page as in they should not be redirected to a page where they are actually giving their GitHub account. It should be auto logged auto logged in. So just you can, if you as a, if you want to use our own credentials, they can still sign out.
+
+99 "Aiswarya S" (2728400896)
+00:27:10.857 --> 00:27:28.504
+Connect to the go pilot. So this needs to be done prior to the event because event location might not have VPN and this page that it redirects to is a GitHub go pilot account page of that uses our enterprise GitHub account which meaning we need our SSO.
+
+100 "Nishant Patnaik" (3462414592)
+00:27:28.504 --> 00:27:33.900
+Okay, so.
+
+101 "Aiswarya S" (2728400896)
+00:27:33.900 --> 00:27:45.419
+I just copied the URL, and signing in.
+
+102 "Nishant Patnaik" (3462414592)
+00:27:45.419 --> 00:27:53.520
+So this is how, when you sign in with any operator, this is how it that operator ID gets mapped to the github.
+
+103 "Aiswarya S" (2728400896)
+00:27:53.520 --> 00:28:23.503
+Correct correct. Now that I'm signing in my operator copilot account, I mean my copilot account to this model operator, it will always be tied to this model operator. I'm using my account for this model operator. So now this is set. Once this is set, you check the status here and we are all good. It should be connected. So this model operator two is now signed in with the.
+
+104 "Nishant Patnaik" (3462414592)
+00:28:23.503 --> 00:28:28.299
+Your account. Yeah, my account.
+
+105 "Aiswarya S" (2728400896)
+00:28:28.299 --> 00:28:44.369
+And to see, the token limits, one thing is the link that you had already showed you had me. You can see that and also we can see it in the GitHub account itself on how much percentage.
+
+106 "Aiswarya S" (2728400896)
+00:28:44.369 --> 00:29:00.569
+Of tokens we have consumed. If we go here go pilot settings, around 7 % only we have used, I have used, so we are still good to use and.
+
+107 "Aiswarya S" (2728400896)
+00:29:00.569 --> 00:29:17.429
+That's, that's pretty much it for Infinity studio. And all the other resets are handled. Reset will actually move the cards, maybe good, quick review here.
+
+108 "Aiswarya S" (2728400896)
+00:29:17.429 --> 00:29:41.256
+Yeah studio Reset will handle all the branch deletion that is created by the player and also would preset some user stories for the players to actually play around. So that's all handled and it's not a one time activity. Separately.
+
+109 "Nishant Patnaik" (3462414592)
+00:29:41.256 --> 00:29:46.584
+So that reset infinity studio is that loan player operator that you showed me is the.
+
+110 "Aiswarya S" (2728400896)
+00:29:46.584 --> 00:29:52.559
+No, that is just not activity.
+
+111 "Aiswarya S" (2728400896)
+00:29:54.316 --> 00:29:58.997
+Yeah, and this would be the parent activity.
+
+112 "Nishant Patnaik" (3462414592)
+00:29:58.997 --> 00:30:03.059
+Okay. So this I have to this I have to run quickly.
+
+113 "Aiswarya S" (2728400896)
+00:30:03.059 --> 00:30:19.321
+No. Okay. It would automatically be called each time infinity Studio experience is initiated while start game is clicked. Okay ok ok yeah that's all I had.
+
+114 "Nishant Patnaik" (3462414592)
+00:30:19.321 --> 00:30:41.559
+Okay, so just so we are all set for the 23rd 24th and 25th event, right? Game more game board one, game board two are all good to go, right? Correct. Okay. For game board three we what are what is what is pending?
+
+115 "Wojciech Szeloch" (228542464)
+00:30:41.559 --> 00:30:47.060
+Testing. Oh, testing. This is already set up.
+
+116 "Nishant Patnaik" (3462414592)
+00:30:47.060 --> 00:30:49.836
+Should be already. Okay.
+
+117 "Aiswarya S" (2728400896)
+00:30:49.836 --> 00:30:58.536
+I think we might need to re ingest if you have a buddy articles three ingestion we might need to do.
+
+118 "Wojciech Szeloch" (228542464)
+00:30:58.536 --> 00:31:03.636
+Oh, ok.
+
+119 "Nishant Patnaik" (3462414592)
+00:31:03.636 --> 00:31:06.797
+Okay. Would you be able to look into that?
+
+120 "Wojciech Szeloch" (228542464)
+00:31:06.797 --> 00:31:10.319
+That project? Yeah, I'll I'll take care of that.
+
+121 "Nishant Patnaik" (3462414592)
+00:31:10.319 --> 00:31:16.498
+Okay. Yeah, once you are done, just let me know I can do a testing tomorrow morning my time, ok?
+
+122 "Wojciech Szeloch" (228542464)
+00:31:16.498 --> 00:31:20.815
+So, so the game go three, so for for when that will.
+
+123 "Nishant Patnaik" (3462414592)
+00:31:20.815 --> 00:31:29.078
+You need it really? That's the it's not not this week. It's not not this week, it's just to make it ready and keep it as a backup.
+
+124 "Wojciech Szeloch" (228542464)
+00:31:29.078 --> 00:31:31.921
+Alright.
+
+125 "Nishant Patnaik" (3462414592)
+00:31:31.921 --> 00:31:57.141
+So, yeah, maybe if you, if you can do the ingestion today it's ok, otherwise you can do it tomorrow and let me know I can do the testing. So you we have your on this until the end of this week, so yeah, if you can so that once we test it we can close the loop on that all the game boards are ready and people can recycle it for different events. So let me know once you're done with the ingestion.
+
+126 "Wojciech Szeloch" (228542464)
+00:31:57.141 --> 00:31:59.311
+Okay. All right.
+
+127 "Aiswarya S" (2728400896)
+00:31:59.311 --> 00:32:18.799
+For infinity instances other than other than the ones that I have already set, I'm planning to log out of existing credentials Nishant, as in keeping the template operators without any sign in credentials and leave.
+
+128 "Aiswarya S" (2728400896)
+00:32:18.799 --> 00:32:25.999
+Get this be a pre step for people who are taking up the event? Does that sound good or.
+
+129 "Nishant Patnaik" (3462414592)
+00:32:25.999 --> 00:32:40.075
+Okay. No, that's, that's fine. I think let's cover what, like I think if it is, if we are good for the events this week, then after I need to have a chat with Nandana and.
+
+130 "Aiswarya S" (2728400896)
+00:32:40.075 --> 00:32:41.096
+You know.
+
+131 "Nishant Patnaik" (3462414592)
+00:32:41.096 --> 00:32:50.638
+What's the best best way to use operators or if we can take up, take this up as a pre pre setup kind of thing as you mentioned, again.
+
+132 "Nishant Patnaik" (3462414592)
+00:32:53.457 --> 00:33:21.679
+Okay, thanks again for doing this, I will upload this recording to the SharePoint folder, and also I share a you forwarded a document link to me for, I think that was there. If you have any other documents, just pass it on to me. I'll I'll upload them to one single SharePoint location. Okay.
+
+133 "Aiswarya S" (2728400896)
+00:33:21.679 --> 00:33:26.160
+Go here.
+
+134 "Nishant Patnaik" (3462414592)
+00:33:26.160 --> 00:33:28.982
+Thanks actually, thanks for thanks for your.
+
+135 "Wojciech Szeloch" (228542464)
+00:33:28.982 --> 00:33:38.528
+Alright, thanks. Thanks everyone. Bye. Bye.

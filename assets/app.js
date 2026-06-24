@@ -271,6 +271,49 @@ function setupCalendarControls() {
   document.getElementById('btn-add-engagement').addEventListener('click', () => {
     openModal();
   });
+
+  // GitHub Sync
+  document.getElementById('btn-gh-sync').addEventListener('click', async () => {
+    const btn = document.getElementById('btn-gh-sync');
+    const status = document.getElementById('sync-status');
+    btn.disabled = true;
+    await syncEngagementsToGitHub(calState.engagements, msg => {
+      status.textContent = msg;
+    });
+    btn.disabled = false;
+    setTimeout(() => { status.textContent = ''; }, 4000);
+  });
+
+  // GitHub Settings modal
+  document.getElementById('btn-gh-settings').addEventListener('click', () => {
+    const s = loadGHSettings();
+    document.getElementById('gh-token').value = s.token || '';
+    document.getElementById('gh-owner').value = s.owner || '';
+    document.getElementById('gh-repo').value = s.repo || '';
+    document.getElementById('gh-branch').value = s.branch || 'main';
+    document.getElementById('gh-modal-overlay').classList.add('open');
+  });
+
+  document.getElementById('gh-modal-cancel').addEventListener('click', () => {
+    document.getElementById('gh-modal-overlay').classList.remove('open');
+  });
+
+  document.getElementById('gh-modal-overlay').addEventListener('click', e => {
+    if (e.target === document.getElementById('gh-modal-overlay'))
+      document.getElementById('gh-modal-overlay').classList.remove('open');
+  });
+
+  document.getElementById('gh-modal-save').addEventListener('click', () => {
+    saveGHSettings({
+      token: document.getElementById('gh-token').value.trim(),
+      owner: document.getElementById('gh-owner').value.trim(),
+      repo: document.getElementById('gh-repo').value.trim(),
+      branch: document.getElementById('gh-branch').value.trim() || 'main'
+    });
+    document.getElementById('gh-modal-overlay').classList.remove('open');
+    document.getElementById('sync-status').textContent = 'GitHub settings saved.';
+    setTimeout(() => { document.getElementById('sync-status').textContent = ''; }, 3000);
+  });
 }
 
 /* ===== Modal ===== */
