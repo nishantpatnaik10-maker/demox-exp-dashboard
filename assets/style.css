@@ -417,3 +417,178 @@ td a:hover { text-decoration: underline; }
   padding: 20px;
   font-size: 13px;
 }
+
+/* ===== Kanban Board ===== */
+.kanban-toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.kanban-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .kanban-board { grid-template-columns: 1fr; }
+}
+
+.kanban-col {
+  background: var(--bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.kanban-col-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  font-weight: 700;
+  font-size: 13px;
+  color: white;
+}
+
+.kanban-col-header .col-count {
+  margin-left: auto;
+  background: rgba(255,255,255,0.25);
+  border-radius: 20px;
+  padding: 1px 9px;
+  font-size: 12px;
+}
+
+.kanban-cards {
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 60px;
+}
+
+.kanban-cards.drag-over {
+  background: rgba(0,102,204,0.06);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.issue-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  cursor: grab;
+  transition: box-shadow 0.15s, transform 0.15s;
+  position: relative;
+}
+
+.issue-card:active { cursor: grabbing; }
+
+.issue-card.dragging {
+  opacity: 0.45;
+  transform: rotate(1.5deg);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+.issue-card h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+  padding-right: 24px;
+}
+
+.issue-card p {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+
+.issue-card .card-footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.priority-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.priority-critical { background: #fde8e8; color: #c0392b; }
+.priority-high     { background: #fef3e0; color: #d35400; }
+.priority-medium   { background: #fef9e0; color: #b7950b; }
+.priority-low      { background: #e9f7ef; color: #1e8449; }
+
+.cat-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 10px;
+  background: var(--pega-light);
+  color: var(--pega-dark);
+}
+
+.issue-card .card-actions {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.issue-card:hover .card-actions { opacity: 1; }
+
+.icon-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: var(--text-muted);
+  transition: all 0.15s;
+}
+
+.icon-btn:hover { background: var(--danger); color: white; border-color: var(--danger); }
+.icon-btn.edit:hover { background: var(--pega-blue); color: white; border-color: var(--pega-blue); }
+
+.move-btns {
+  display: flex;
+  gap: 3px;
+  margin-top: 6px;
+}
+
+.move-btn {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.move-btn:hover { background: var(--pega-blue); color: white; border-color: var(--pega-blue); }
