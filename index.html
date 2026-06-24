@@ -14,7 +14,8 @@
 </header>
 
 <nav class="tabs">
-  <button class="active" data-tab="tab-links">&#128279; Quick Links</button>
+  <button class="active" data-tab="tab-overview">&#127968; Overview</button>
+  <button data-tab="tab-links">&#128279; Quick Links</button>
   <button data-tab="tab-instances">&#128202; Instance Mapping</button>
   <button data-tab="tab-calendar">&#128197; Engagement Calendar</button>
   <button data-tab="tab-kanban">&#128204; Known Issues</button>
@@ -22,8 +23,43 @@
 
 <main>
 
+  <!-- ===== OVERVIEW ===== -->
+  <div id="tab-overview" class="tab-panel active">
+    <!-- Stat Cards -->
+    <div id="overview-stats" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:16px; margin-bottom:24px;"></div>
+    <!-- Charts Row 1 -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:20px;">
+      <div class="card">
+        <div class="card-title">&#128200; Engagements by Type</div>
+        <canvas id="chart-eng-type" height="220"></canvas>
+      </div>
+      <div class="card">
+        <div class="card-title">&#128200; Engagements by Gameboard</div>
+        <canvas id="chart-eng-gameboard" height="220"></canvas>
+      </div>
+    </div>
+    <!-- Charts Row 2 -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:20px;">
+      <div class="card">
+        <div class="card-title">&#128202; Issues by Status</div>
+        <canvas id="chart-issues-status" height="220"></canvas>
+      </div>
+      <div class="card">
+        <div class="card-title">&#128202; Issues by Priority</div>
+        <canvas id="chart-issues-priority" height="220"></canvas>
+      </div>
+    </div>
+    <!-- Charts Row 3 -->
+    <div style="display:grid; grid-template-columns:1fr; gap:20px;">
+      <div class="card">
+        <div class="card-title">&#128197; Engagements Timeline (by Month)</div>
+        <canvas id="chart-eng-timeline" height="120"></canvas>
+      </div>
+    </div>
+  </div>
+
   <!-- ===== QUICK LINKS ===== -->
-  <div id="tab-links" class="tab-panel active">
+  <div id="tab-links" class="tab-panel">
     <div id="links-container"></div>
   </div>
 
@@ -233,6 +269,14 @@
           <option value="">-- None --</option>
         </select>
       </div>
+      <div class="form-group">
+        <label for="issue-comments">Comments / Notes</label>
+        <textarea id="issue-comments" name="comments" rows="2" placeholder="Ongoing comments, workarounds, updates..."></textarea>
+      </div>
+      <div class="form-group">
+        <label for="issue-resolution">Resolution Notes</label>
+        <textarea id="issue-resolution" name="resolution" rows="2" placeholder="How was this resolved? Steps taken..."></textarea>
+      </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-ghost" id="issue-modal-cancel">Cancel</button>
         <button type="submit" class="btn btn-primary" id="issue-modal-submit">Save Issue</button>
@@ -241,6 +285,7 @@
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <!-- Data -->
 <script src="data/instances.js"></script>
 <script src="data/links.js"></script>
@@ -251,6 +296,7 @@
 <!-- App -->
 <script src="assets/app.js"></script>
 <script src="assets/kanban.js"></script>
+<script src="assets/overview.js"></script>
 
 <script>
   // Populate engagement type dropdown in modal

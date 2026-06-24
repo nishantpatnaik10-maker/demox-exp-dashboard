@@ -83,6 +83,8 @@ function renderCard(issue, col) {
       </div>
       <h4>${escHtml(issue.title)}</h4>
       ${issue.description ? `<p>${escHtml(issue.description)}</p>` : ''}
+      ${issue.comments ? `<p style="color:#555;border-left:3px solid #0066cc;padding-left:6px;margin-top:4px;">&#128172; ${escHtml(issue.comments)}</p>` : ''}
+      ${issue.resolution ? `<p style="color:#1e8449;border-left:3px solid #28a745;padding-left:6px;margin-top:4px;">&#9989; ${escHtml(issue.resolution)}</p>` : ''}
       <div class="card-footer">
         ${issue.priority ? `<span class="priority-badge priority-${pri}">${issue.priority}</span>` : ''}
         ${issue.category ? `<span class="cat-badge">${escHtml(issue.category)}</span>` : ''}
@@ -165,6 +167,8 @@ window.openIssueModal = function(id) {
     document.getElementById('issue-status').value = issue.status || 'backlog';
     document.getElementById('issue-assignee').value = issue.assignee || '';
     document.getElementById('issue-gameboard').value = issue.gameboard || '';
+    document.getElementById('issue-comments').value = issue.comments || '';
+    document.getElementById('issue-resolution').value = issue.resolution || '';
   } else {
     document.getElementById('issue-modal-title').textContent = 'Add Issue';
     document.getElementById('issue-modal-submit').textContent = 'Save Issue';
@@ -197,7 +201,9 @@ function setupKanbanControls() {
       category: fd.get('category'),
       status: fd.get('status') || 'backlog',
       assignee: fd.get('assignee').trim(),
-      gameboard: fd.get('gameboard')
+      gameboard: fd.get('gameboard'),
+      comments: fd.get('comments').trim(),
+      resolution: fd.get('resolution').trim()
     };
 
     if (id) {
