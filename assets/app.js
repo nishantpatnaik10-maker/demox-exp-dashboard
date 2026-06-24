@@ -238,6 +238,7 @@ function renderSidePanel() {
           ${e.attendees ? `<p>&#128101; ${e.attendees}</p>` : ''}
           ${e.notes ? `<p>&#128221; ${e.notes}</p>` : ''}
           <div class="actions">
+            <button class="btn btn-ghost" onclick="editEng('${e.id}')">&#9998; Edit</button>
             <button class="btn btn-danger" onclick="deleteEng('${e.id}')">Delete</button>
           </div>
         </div>
@@ -318,11 +319,12 @@ function setupCalendarControls() {
 }
 
 /* ===== Modal ===== */
-function openModal(prefillDate) {
+function openModal(engagementId) {
   const modal = document.getElementById('modal-overlay');
-  modal.classList.add('open');
+  const form = document.getElementById('eng-form');
+  form.reset();
 
-  // Populate gameboard options
+  // Populate gameboard options once
   const gbSelect = document.getElementById('eng-gameboard');
   if (gbSelect.children.length <= 1) {
     INSTANCES_DATA.forEach(g => {
@@ -333,9 +335,29 @@ function openModal(prefillDate) {
     });
   }
 
-  // Set date if provided
-  const dateInput = document.getElementById('eng-date');
-  dateInput.value = prefillDate || calState.selectedDate || formatDate(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+  if (engagementId) {
+    // Edit mode
+    const eng = calState.engagements.find(e => e.id === engagementId);
+    if (!eng) return;
+    document.getElementById('modal-overlay').querySelector('h3').textContent = 'Edit Engagement';
+    document.getElementById('modal-overlay').querySelector('[type=submit]').textContent = 'Update Engagement';
+    document.getElementById('eng-id').value = eng.id;
+    document.getElementById('eng-title').value = eng.title || '';
+    document.getElementById('eng-date').value = eng.date || '';
+    document.getElementById('eng-enddate').value = eng.endDate || '';
+    document.getElementById('eng-type').value = eng.type || '';
+    document.getElementById('eng-gameboard').value = eng.gameboard || '';
+    document.getElementById('eng-attendees').value = eng.attendees || '';
+    document.getElementById('eng-notes').value = eng.notes || '';
+  } else {
+    // Add mode
+    document.getElementById('modal-overlay').querySelector('h3').textContent = 'Add Engagement';
+    document.getElementById('modal-overlay').querySelector('[type=submit]').textContent = 'Save Engagement';
+    document.getElementById('eng-id').value = '';
+    document.getElementById('eng-date').value = calState.selectedDate || formatDate(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+  }
+
+  modal.classList.add('open');
 }
 
 function closeModal() {
@@ -351,7 +373,8 @@ document.getElementById('modal-overlay').addEventListener('click', e => {
 document.getElementById('eng-form').addEventListener('submit', e => {
   e.preventDefault();
   const fd = new FormData(e.target);
-  const eng = {
+  const id = fd.get('id');
+  const data = {
     title: fd.get('title').trim(),
     date: fd.get('date'),
     endDate: fd.get('endDate') || fd.get('date'),
@@ -360,7 +383,11 @@ document.getElementById('eng-form').addEventListener('submit', e => {
     attendees: fd.get('attendees').trim(),
     notes: fd.get('notes').trim()
   };
-  calState.engagements = addEngagement(eng);
+  if (id) {
+    calState.engagements = updateEngagement(id, data);
+  } else {
+    calState.engagements = addEngagement(data);
+  }
   closeModal();
   renderCalendar();
   renderSidePanel();
@@ -371,6 +398,10 @@ window.deleteEng = function(id) {
   calState.engagements = deleteEngagement(id);
   renderCalendar();
   renderSidePanel();
+};
+
+window.editEng = function(id) {
+  openModal(id);
 };
 
 /* ===== Helpers ===== */
