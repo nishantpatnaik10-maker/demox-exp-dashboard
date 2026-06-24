@@ -1,61 +1,10 @@
 // Engagements Calendar Data
 // Auto-synced from EXP26 Dashboard
-// Last updated: 2026-06-24T10:02:53.276Z
+// Last updated: 2026-06-24T10:06:13.840Z
 
 const ENGAGEMENTS_STORAGE_KEY = "exp26_engagements";
 
-const INITIAL_ENGAGEMENTS = [
-  {
-    "title": "EBC Opening",
-    "date": "2026-06-25",
-    "endDate": "2026-06-25",
-    "gameboard": "exp26-gameboard-1.pegademo.com",
-    "type": "Workshop",
-    "attendees": "",
-    "notes": "",
-    "id": "eng-1781848164435"
-  },
-  {
-    "title": "Verizon",
-    "date": "2026-06-24",
-    "endDate": "2026-06-24",
-    "gameboard": "exp26-gameboard-2.pegademo.com",
-    "type": "Workshop",
-    "attendees": "",
-    "notes": "",
-    "id": "eng-1781848364187"
-  },
-  {
-    "title": "Llyods Banking Group",
-    "date": "2026-06-23",
-    "endDate": "2026-06-23",
-    "gameboard": "Gameboard 2",
-    "type": "Workshop",
-    "attendees": "Rubeen",
-    "notes": "",
-    "id": "eng-1782217142157"
-  },
-  {
-    "title": "HMRC",
-    "date": "2026-06-23",
-    "endDate": "2026-06-24",
-    "gameboard": "Gameboard 3",
-    "type": "",
-    "attendees": "Rob Evans",
-    "notes": "Rob Evans",
-    "id": "eng-1782217193415"
-  },
-  {
-    "title": "Booking.com",
-    "date": "2026-06-23",
-    "endDate": "2026-06-23",
-    "gameboard": "Gameboard 1",
-    "type": "Workshop",
-    "attendees": "Kathirna & Nandana",
-    "notes": "",
-    "id": "eng-1782289190051"
-  }
-];
+const INITIAL_ENGAGEMENTS = [];
 
 const ENGAGEMENT_TYPES = [
   "Workshop",
