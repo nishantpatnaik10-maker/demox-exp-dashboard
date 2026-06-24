@@ -1,5 +1,5 @@
 // ENGAGEMENTS DATA FILE
-// Auto-updated by Sync to GitHub on 2026-06-24T10:32:06.408Z
+// Auto-updated by Sync to GitHub on 2026-06-24T10:34:12.544Z
 // Do not edit manually — use the dashboard.
 
 const INITIAL_ENGAGEMENTS = [
@@ -32,5 +32,15 @@ const INITIAL_ENGAGEMENTS = [
     "attendees": "Rubeen Dhesi",
     "notes": "",
     "id": "eng-1782297121872"
+  },
+  {
+    "title": "Verizon",
+    "date": "2026-06-24",
+    "endDate": "2026-06-24",
+    "gameboard": "Gameboard 2",
+    "type": "Workshop",
+    "attendees": "Nandana Ganu",
+    "notes": "",
+    "id": "eng-1782297248106"
   }
 ];
