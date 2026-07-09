@@ -1,5 +1,5 @@
 // ENGAGEMENTS DATA FILE
-// Auto-updated by Sync to GitHub on 2026-07-06T11:38:29.685Z
+// Auto-updated by Sync to GitHub on 2026-07-09T12:27:50.128Z
 // Do not edit manually — use the dashboard.
 
 const INITIAL_ENGAGEMENTS = [
@@ -82,5 +82,35 @@ const INITIAL_ENGAGEMENTS = [
     "attendees": "Wojciech",
     "notes": "",
     "id": "eng-1783337894512"
+  },
+  {
+    "title": "CBA Infinity Studio Experience",
+    "date": "2026-07-21",
+    "endDate": "2026-07-21",
+    "gameboard": "Gameboard 3",
+    "type": "Workshop",
+    "attendees": "Nishant",
+    "notes": "",
+    "id": "eng-1783599702112"
+  },
+  {
+    "title": "Pega Connection Day",
+    "date": "2026-07-22",
+    "endDate": "2026-07-22",
+    "gameboard": "Gameboard 1",
+    "type": "Workshop",
+    "attendees": "Wiktor, Tim, Wojciech, Katharina, Sofi, Nishant Nandana",
+    "notes": "",
+    "id": "eng-1783599805376"
+  },
+  {
+    "title": "Lloyd's Banking Group - Roadshow Event London",
+    "date": "2026-07-23",
+    "endDate": "2026-07-23",
+    "gameboard": "Gameboard 3",
+    "type": "Workshop",
+    "attendees": "Kinneh Obi, Brian Long",
+    "notes": "",
+    "id": "eng-1783600060042"
   }
 ];
